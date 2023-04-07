@@ -1,0 +1,87 @@
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#ifndef ClassesH
+#define ClassesH
+
+class PIESA
+{
+protected:
+        int x, y;
+public:
+        int a[4][4];
+        PIESA();
+        PIESA(int x0, int y0);
+        ~PIESA();
+        virtual void Afiseaza()=0;
+        virtual void Sterge()=0;
+        void mutaStanga();
+        void mutaDreapta();
+        void mutaJos();
+        virtual void rotire1()=0;
+        virtual void rotire2()=0;
+        virtual void rotire3()=0;
+        virtual void rotire4()=0;
+};
+
+class PATRAT: public PIESA
+{
+public:
+        PATRAT();
+        PATRAT(int x0, int y0);
+        void Afiseaza();
+        void Sterge();
+        void rotire1();
+        void rotire2();
+        void rotire3();
+        void rotire4();
+};
+class LINIE: public PIESA
+{
+public:
+        LINIE();
+        LINIE(int x0, int y0);
+        void Afiseaza();
+        void Sterge();
+        void rotire1();
+        void rotire2();
+        void rotire3();
+        void rotire4();
+};
+class L: public PIESA
+{
+public:
+        L();
+        L(int x0, int y0);
+        void Afiseaza();
+        void Sterge();
+        void rotire1();
+        void rotire2();
+        void rotire3();
+        void rotire4();
+};
+class T: public PIESA
+{
+public:
+        T();
+        T(int x0, int y0);
+        void Afiseaza();
+        void Sterge();
+        void rotire1();
+        void rotire2();
+        void rotire3();
+        void rotire4();
+};
+//---------------------------------------------------------------------------
+
+class TABLA{
+public:
+        int tabla[20][10];
+        TABLA();
+        int latime;
+        int inaltime;
+};
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,68 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Piesa_L.h"
+
+//---------------------------------------------------------------------------
+
+Piesa_L::Piesa_L(int x, int y):Piesa()
+{
+        pos[0]=x+1;
+	pos[1]=y;
+	pos[2]=x;
+	pos[3]=y;
+	pos[4]=x-1;
+	pos[5]=y;
+	pos[6]=x-1;
+	pos[7]=y-1;
+        construieste_PiesaL();
+}
+
+void Piesa_L::rotire1()
+{
+        pos[0]--;
+	pos[1]--;
+
+	pos[4]++;
+	pos[5]++;
+	pos[6];
+	pos[7]+=2;
+        construieste_PiesaL();
+}
+void Piesa_L::rotire2()
+{
+        pos[0]--;
+	pos[1]++;
+
+	pos[4]++;
+	pos[5]--;
+	pos[6]+=2;
+	pos[7];
+        construieste_PiesaL();
+}
+void Piesa_L::rotire3()
+{
+        pos[0]++;
+	pos[1]++;
+
+	pos[4]--;
+	pos[5]--;
+	pos[6];
+	pos[7]-=2;
+        construieste_PiesaL();
+}
+void Piesa_L::rotire4()
+{
+        pos[0]++;
+	pos[1]--;
+
+	pos[4]--;
+	pos[5]++;
+	pos[6]-=2;
+	pos[7];
+        construieste_PiesaL();
+
+}
+#pragma package(smart_init)
